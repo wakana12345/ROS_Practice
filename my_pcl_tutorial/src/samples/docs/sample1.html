@@ -1,0 +1,69 @@
+<?xml version=1.0 encoding="UTF-8?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>山彦セミナー</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<h1>サンプルプログラム1</h1>
+
+<h2>概要</h2>
+<p>
+URGの取得データをPCLで可視化するプログラムです。<br>
+URGから取得した点群をPointCloudクラスに代入してCloudViewerで可視化します。<br>
+<img src="./images/sample1.png" alt="sample1" width="600"></img><br>
+↑可視化された反射点群
+</p>
+
+<h2>使いかた</h2>
+<ol>
+<li>
+まず、sample1のbuildディレクトリに移動して、
+<div class="command">
+cmake ..
+</div>
+と入力します。これで、CMakeLists.txtに書かれた情報を元に、CMakeがmakefileを作成します。<br>
+</li>
+<br>
+<li>
+作成したmakefileを使って、srcディレクトリにあるsample1.cppをコンパイルします。次のように入力します。
+<div class="command">
+make
+</div>
+これでsample1.cppのコンパイルが始まります。<br>
+以下のように出力されればOK。binディレクトリにsample1という実行ファイルが出来るはずです。
+<div class="command">
+[100%] Building CXX object CMakeFiles/sample1.dir/sample1.cpp.o<br>
+Linking CXX executable sample1<br>
+[100%] Built target sample1<br>
+</div>
+</li>
+<br>
+<li>
+PCとURGを接続し、URGを起動します<br>
+※URGはClassic-URGにしてください。<br>
+</li>
+<br>
+<li>
+最後にbinディレクトリに移動して
+<div class="command">
+./sample1
+</div>
+と入力して実行するとビューワーが開かれて上のような画面が見えるはずです。<br>
+※私の環境ではデフォルトでものすごくズームされていたので、マウスホイールでズームアウトしないと見えませんでしたが・・・<br>
+<br>
+マウスドラッグで視点を変更できます。<br>
+「+」キー(「Shift」+「;」キー)で点を大きくできます。<br>
+端末でctrl-cを入力するか、ビューワーを閉じるとプログラムは終わります。
+</li>
+
+</ol>
+
+<p><a href="../readme.html">readmeのトップへ戻る</a></p>
+
+</body>
+</html>

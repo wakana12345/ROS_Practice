@@ -1,0 +1,52 @@
+<?xml version=1.0 encoding="UTF-8?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>山彦セミナー(PCL)</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<h1>サンプルプログラム3</h1>
+
+<h2>概要</h2>
+<p>
+Kinect(またはXtion)から3次元点群を取得して表示するプログラムです。<br>
+実行にはKinectかXtionが必要なので、旧人に場所を聞いてみましょう。<br>
+<img src="./images/openni_cams.jpg" alt="kinect,xtion" width="300"></img><br>
+↑この画像の真ん中がKinect、下段がXtion(読みは「アクション」)。いずれも赤外線で距離画像を取得するセンサ。
+</p>
+
+<h2>使いかた</h2>
+<ol>
+<li>
+コンパイルして実行しましょう。<br>
+コンパイル方法は<a href="sample1.html">サンプルプログラム1</a>と同じです。<br>
+実行時にノートPCにXtionかKinectをUSB接続してください。<br>
+※XtionはUSBバスパワーですが、Kinectは別に電源に接続する必要があります。<br>
+<br>
+成功すればこのような色つきの3次元点群が見えるはず！<br>
+<img src="./images/sample3.png" alt="sample3" width="500"></img><br>
+※KinectやXtionを使う場合、PCLが「実行権限がありません」などのエラーを返してくることがあります。<br>
+その時は、
+<div class="command">
+sudo ./sample3
+</div>
+とすれば実行できます。
+</li>
+
+<li>
+<p>
+余談ですが、KinectやXtionは、屋外では太陽光が強すぎてうまく3次元計測ができないことが多いです。
+このプログラムを走らせた状態でKinectやXtionを昼間、窓の外に向けてみるとわかるかもしれません。
+</p>
+</li>
+
+</ol>
+
+<p><a href="../readme.html">readmeのトップへ戻る</a></p>
+
+</body>
+</html>

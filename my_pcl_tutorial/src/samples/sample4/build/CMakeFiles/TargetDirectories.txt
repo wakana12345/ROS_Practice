@@ -1,0 +1,1 @@
+/home/a-matsumoto/lab-management/ymbc-seminar/2014/sample-programs/final/samples/sample4/build/CMakeFiles/sample4.dir

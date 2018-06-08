@@ -1,0 +1,27 @@
+body 
+{
+	text-align: left;
+}
+
+h1 
+{
+	font-size: 30px;
+	border-left: solid blue 10px;
+	border-bottom: solid blue 2px;
+}
+
+h2 
+{
+	font-size: 20px;
+	border-left: solid green 10px;
+	border-bottom: solid green 2px;
+}
+
+.command 
+{
+	background: #F0FFFF;
+	border: dashed black 0.5px;
+	padding: 10px;
+	margin: 10px;
+}
+

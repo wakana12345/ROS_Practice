@@ -1,0 +1,71 @@
+<?xml version=1.0 encoding="UTF-8?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>山彦セミナー(PCL)</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<h1>サンプルプログラム4</h1>
+
+<h2>概要</h2>
+<p>
+ICP(Iterative Closest Point)という手法を使って、2つのポイントクラウドを位置合わせするプログラムです。<br>
+<img src="./images/sample4.png" alt="sample4" width="600"></img><br>
+↑ピンクがターゲットクラウド、黄色が位置合わせされたテンプレートクラウド
+<br>
+※ICPは、
+<ol>
+<li>テンプレートクラウドのそれぞれの点について、ターゲットクラウドの最寄りの1点を対応点とする</li>
+<li>すべての対応点同士の距離が小さくなるようにテンプレートクラウドをターゲットクラウドに向かって移動させる</li>
+</ol>
+この2つの動作を繰り返すことで、テンプレートとターゲットの位置を合わせる手法です。<br>
+ICPは局所的な最適解に収束する(初期位置が大きく間違っていると間違った場所に収束してしまう)性質を持っています。<br>
+詳細については、興味がある人は調べてみましょう。
+</p>
+
+<h2>使いかた</h2>
+<ol>
+<li>
+まずコンパイルします。<br>
+コンパイル方法は<a href="sample1.html">サンプルプログラム1</a>と同じです。<br>
+</li>
+<br>
+<li>
+実行する前に、テンプレートおよびターゲットとなるPCDファイルを見てみましょう。dataディレクトリに移動してpcd_viewerを起動してみてください。<br>
+<strong>※2014-07-22追記 最近のバージョンでは、pcd_viewerが無いことがあります。その時は代わりにpcl_viewerを使ってください。</strong>
+<div class="command">pcd_viewer templateA.pcd</div>
+<img src="./images/templateA.png" alt="テンプレート" width="300"></img><br>
+↑templateA.pcd。椅子の部分だけを切り取ったものです。
+<div class="command">pcd_viewer targetA.pcd</div>
+<img src="./images/targetA.png" alt="ターゲット" width="300"></img><br>
+↑targetA.pcd。机の下の椅子をXtionで撮影したものです。
+<div class="command">pcd_viewer targetA.pcd templateA.pcd</div>
+<img src="./images/compair.png" alt="ターゲット" width="300"></img><br>
+↑templateA.pcd(ピンク)とtargetA.pcd(黄土色)の比較。初期位置はこれだけ離れています。
+</li>
+<br>
+<li>
+プログラムを実行し、ICPを行います。処理が終わるとマッチングの結果が端末に出力されます。<br>
+<div class="command">./sample4 ../data/templateA.pcd ../data/targetA.pcd</div>
+位置合わせされたテンプレートは「output.pcd」として出力されます。
+</li>
+<br>
+<li>
+<div class="command">pcd_viewer output.pcd targetA.pcd</div>
+結果とoutput.pcdを比較してみると、templateA.pcdがtargetA.pcdの対応する部分に移動していることがわかります。(このページの一番上の図)
+</li>
+<br>
+<li>
+別の種類の椅子のデータtemplateB.pcdおよびtargetB.pcdも用意しているので、よければ試してみてください。
+</li>
+
+</ol>
+
+<p><a href="../readme.html">readmeのトップへ戻る</a></p>
+
+</body>
+</html>

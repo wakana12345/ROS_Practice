@@ -1,0 +1,54 @@
+<?xml version=1.0 encoding="UTF-8?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>山彦セミナー(PCL)</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<h1>サンプルプログラム2</h1>
+
+<h2>概要</h2>
+<p>
+ポイントクラウドの各種操作のサンプルです。<br>
+クラウド内部の点の操作、またPCDファイル(Point Cloud Dataファイル：ポイントクラウドを保存するためのファイル形式)の読み書きのサンプルです。<br>
+興味があればソースを読んでみてください。<br>
+</p>
+
+<h2>使いかた</h2>
+<p>
+コンパイルして実行しましょう(センサは不要なので何も接続しないでOKです)<br>
+コンパイル方法は<a href="sample1.html">サンプルプログラム1</a>と同じです。<br>
+ソースコードと出力内容を比べてみてください。<br>
+</p>
+
+<h2>PCD Viewerについて</h2>
+このプログラムは、最後にdataディレクトリにPCDファイル「saveSample.pcd」を1つ出力するようになっています。<br>
+PCDファイルのビューワはPCLと同時にインストールされるので、端末で
+<div class="command">
+pcd_viewer saveSample.pcd
+</div>
+と入力すると、見ることができます。<br>
+<strong>※2014-07-22追記 最近のバージョンでは、pcd_viewerが無いことがあります。その時は代わりにpcl_viewerを使ってください。</strong><br>
+ビューワは複数のPCDファイルを同時に見ることもできます。例えば
+<div class="command">
+pcd_viewer xxx.pcd yyy.pcd zzz.pcd
+</div>
+などと入力すれば3つのPCDファイルを同時に見られます。<br>
+また、ワイルドカードも使用でき、
+<div class="command">
+pcd_viewer *.pcd
+</div>
+とすればそのディレクトリ内のすべてのPCDを同時に見ることができます<br>
+ビューワは「q」キーで終了します。「1」キーでクラウドの色が変わります。<br>
+また、クラウドに色情報がある場合は「5」キーで色つきのクラウドを見ることができます。<br>
+この他の使い方は「h」キーを押してヘルプを見てみましょう。
+</p>
+
+<p><a href="../readme.html">readmeのトップへ戻る</a></p>
+
+</body>
+</html>

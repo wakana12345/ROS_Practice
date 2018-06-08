@@ -1,0 +1,7 @@
+
+SEQSENSE
+https://github.com/seqsense/sq_navigation/blob/5edfe9d4ae6bb286d4b17068c57fb0258480f2ee/sq_laser_processing/src/wall_extract.cpp
+
+
+ROS
+http://wiki.ros.org/pcl/Tutorials
