@@ -1,0 +1,1 @@
+ypspur_run\test.cppの成功ver　は　ypspur_run_text_backupに移した
